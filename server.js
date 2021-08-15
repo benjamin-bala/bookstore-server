@@ -22,7 +22,9 @@ connection.once('open', () => console.log(`Database conncection established`))
 
 const productsRoute = require('./routes/products')
 const usersRoute = require('./routes/users')
-
+app.get('/', (req,res) => {
+    res.send("Welcome to Hivestore")
+})
 app.use('/products', productsRoute)
 app.use('/users', usersRoute)
 
